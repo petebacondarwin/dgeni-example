@@ -68,3 +68,106 @@ As you can this task will run Dgeni, configured with the file at `docs/dgeni.con
 # How can I configure Dgeni?
 
 You must provide a configuration file to tell Dgeni what to do.  Check out the configuration file in this project, at `docs/dgeni.conf`.
+
+# How does Dgeni work?
+
+
+Say we have a `src/` with `app.js` and a `script.js` annotated with jsdocs:
+
+```
+// app.js
+/**
+ * @name log
+ * @description This function logs a string.
+ */
+
+function log() {
+  console.log('Logging.');
+}
+```
+
+```
+// script.js
+/**
+ * @name helloWorld
+ * @description This function returns a string.
+ *
+ * @returns {string} This string has the value 'Hello World'.
+ */
+
+function helloWorld() {
+  return 'Hello World';
+}
+```
+
+We can the Dgeni to read these these files and render docs based on nunjucks-template like this:
+
+```
+var path = require('canonical-path');
+
+// What annotations do we want to use? Choose jsdoc for now.
+var jsdocPackage = require('dgeni-packages/jsdoc');
+
+module.exports = function(config) {
+  // Use jsdocPackage
+  config = jsdocPackage(config);
+
+  // Set logging level
+  config.set('logging.level', 'info');
+
+  // Add your own templates to render docs
+  config.prepend('rendering.templateFolders', [
+    path.resolve(__dirname, 'templates')
+  ]);
+
+  // You can specifiy which tempate should be used based on a pattern.
+  // Currently we just use one template and don't need a pattern
+  config.prepend('rendering.templatePatterns', [
+    'common.template.html'
+  ]);
+
+  // This tells dgeni where to look for stuff
+  config.set('source.projectPath', '.');
+
+  config.set('source.files', [
+    {
+      // Process all js files in src/.
+      pattern: 'src/**/*.js',
+      basePath: path.resolve(__dirname, '..')
+    }
+  ]);
+
+  // Our generated docs will be written here:
+  config.set('rendering.outputFolder', '../build/');
+  config.set('rendering.contentsFolder', 'docs');
+
+  return config;
+};
+```
+
+Our template sits is placed in `docs/templates/common.template.html` and looks like this:
+
+```
+My doc:
+
+<h1>{{ doc.name }}</h1>
+<p>{{ doc.description }}</p>
+```
+
+Now call your Gulp or Grunt task you will get these files:
+
+```
+<!-- build/docs/src/app.html -->
+My doc:
+
+<h1>log</h1>
+<p>This function logs a string.</p>
+```
+
+```
+<!-- build/docs/src/script.html -->
+My doc:
+
+<h1>helloWorld</h1>
+<p>This function returns a string.</p>
+```
