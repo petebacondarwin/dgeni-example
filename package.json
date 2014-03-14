@@ -1,0 +1,30 @@
+{
+  "name": "dgeni-example",
+  "version": "0.0.0",
+  "description": "[dgeni](https://github.com/angular/dgeni) is a documentation generator developed by the [Angular team](https://github.com/angular). Ironically it lacks documentation right now, so we try to develop a very simple step-by-step-guide here, until a better documentation is available. Please share and fork this Gist.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/petebacondarwin/dgeni-example.git"
+  },
+  "author": "",
+  "licenses": [
+    {
+      "type": "Apache",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/petebacondarwin/dgeni-example/issues"
+  },
+  "homepage": "https://github.com/petebacondarwin/dgeni-example",
+  "devDependencies": {
+    "dgeni": "^0.2.2",
+    "dgeni-packages": "^0.7.1",
+    "gulp": "^3.5.6",
+    "canonical-path": "0.0.2"
+  }
+}

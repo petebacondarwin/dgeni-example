@@ -51,8 +51,7 @@ Just create this custom task in your `gulpfile.js` until an official package is 
 var dgeni = require('dgeni');
 gulp.task('dgeni', function(done) {
   return dgeni('docs/docs.config.js')
-    .generateDocs()
-    .then(done);
+    .generateDocs();
 });
 ```
 
