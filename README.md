@@ -67,7 +67,7 @@ As you can this task will run Dgeni, configured with the file at `docs/dgeni.con
 
 # How can I configure Dgeni?
 
-You must provide a configuration file to tell Dgeni what to do.  Check out the configuration file in this project, at `docs/dgeni.conf`.
+You must provide a configuration file to tell Dgeni what to do.  Check out the configuration file in this project, at `docs/dgeni.conf.js`.
 
 # How does Dgeni work?
 
