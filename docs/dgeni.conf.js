@@ -29,14 +29,20 @@ module.exports = function(config) {
     {
       // Process all js files in src/.
       pattern: 'src/**/*.js',
-      // @dgeni developers: Why is basePath different from config.get('source.projectPath')?
+      // Some processors use the relative path of the source file to compute properties, such as
+      // the outputPath. The basePath allows us to ensure that the "relative" path to each source
+      // file is accurate no matter where the source files are relative to the projectPath.
       basePath: path.resolve(__dirname, '..')
     }
   ]);
 
   // Our generated docs will be written here:
-  // @dgeni developers: Why is both (outputFolder and contentsFolder) needed?
   config.set('rendering.outputFolder', '../build/');
+  // The contentsFolder is the path relative to the outputFolder, which identifies the place where
+  // the "standard" content files are stored.  For example, in the AngularJS application, the output
+  // folder is `build/docs` but the way that the application is stored, means that we want the
+  // content files (i.e. the files that contain the content of each "doc") to be stored in
+  // `build/docs/partials`
   config.set('rendering.contentsFolder', 'docs');
 
   return config;
