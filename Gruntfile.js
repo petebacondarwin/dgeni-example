@@ -4,9 +4,8 @@ module.exports = function(grunt) {
     var dgeni = require('dgeni');
     var done = this.async();
 
-    dgeni('docs/dgeni.conf.js')
-      .generateDocs()
-      .then(done);
+    var generateDocs = dgeni.generator('docs/dgeni.conf.js');
+    generateDocs().then(done);
   });
 
   grunt.registerTask('default', ['dgeni']);
