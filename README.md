@@ -1,8 +1,8 @@
 # What is Dgeni?
 
-[Dgeni](https://github.com/angular/dgeni) is a documentation generator developed by the [Angular team](https://github.com/angular). Ironically it lacks documentation right now, so we try to develop a very simple step-by-step-guide here, until a better documentation is available. Please share and fork this Gist.
+[Dgeni](https://github.com/angular/dgeni) is a documentation generator developed by the [Angular team](https://github.com/angular). Ironically it lacks documentation right now, so we try to develop a very simple step-by-step-guide here, until a better documentation is available. Please share and fork this repo.
 
-Dgeni is currently used in these project
+Dgeni is currently used in these projects:
 - [Angular](https://github.com/angular/angular.js/tree/master/docs)
 - [protractor](https://github.com/angular/protractor/tree/master/docs)
 - [ionic](https://github.com/driftyco/ionic/tree/master/docs)
