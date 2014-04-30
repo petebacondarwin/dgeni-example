@@ -13,7 +13,7 @@ Dgeni seems to be very flexible, because it has a modular core and its extensibi
 
 # How do I install Dgeni?
 
-Install [Node](http://nodejs.org/), if you don't have it allready. After that you can install Dgeni and an additional module with basic plugins for dgeni called dgeni-packages:
+Install [Node](http://nodejs.org/), if you don't have it allready. After that you can install Dgeni and an additional module with basic plugins for Dgeni called `dgeni-packages`:
 
 ```
 $ npm install --save-dev dgeni dgeni-packages
@@ -40,13 +40,12 @@ You can execute this task via:
 $ grunt dgeni
 ```
 
-As you can this task will look for a configuration file inside `docs/dgeni.conf.js`. You can change this path, if you wish.
+This task will look for a configuration file called `docs/dgeni.conf.js`. You can change this path, if you wish.
 
 # How can I use Dgeni with Gulp?
 
 
-Gulp plugins are specifically for file manipulation with streams.  Dgeni does not process files in a stream like manner so it
-is not appropriate to build a Gulp plugin.  Luckily, the way Gulp works it is really easy to run Dgeni from a task:
+Gulp plugins are specifically for file manipulation with streams.  Dgeni does not process files in a stream like manner so it is not appropriate to build a Gulp plugin. Luckily, the way Gulp works it is really easy to run Dgeni from a task:
 
 ```
 var gulp = require('gulp');
@@ -63,14 +62,13 @@ You can execute this task via:
 $ gulp dgeni
 ```
 
-As you can this task will run Dgeni, configured with the file at `docs/dgeni.conf.js`. You can change this path, if you wish.
+This task will run Dgeni, configured with the file at `docs/dgeni.conf.js`. You can change this path, if you wish.
 
 # How can I configure Dgeni?
 
-You must provide a configuration file to tell Dgeni what to do.  Check out the configuration file in this project, at `docs/dgeni.conf.js`.
+You must provide a configuration file to tell Dgeni what to do. Check out the configuration file in this project, at `docs/dgeni.conf.js`.
 
 # How does Dgeni work?
-
 
 Say we have a `src/` with `app.js` and a `script.js` annotated with jsdocs:
 
