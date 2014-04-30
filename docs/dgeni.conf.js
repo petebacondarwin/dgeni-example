@@ -1,12 +1,13 @@
 // @dgeni developers: Why do we need canonical-path?
 var path = require('canonical-path');
 
-// What annotations do we want to use? Choose jsdoc for now.
-var jsdocPackage = require('dgeni-packages/jsdoc');
 
 module.exports = function(config) {
   // Use jsdocPackage
-  config = jsdocPackage(config);
+  require('dgeni-packages/jsdoc')(config);
+
+  // And the nunjucks template renderer
+  require('dgeni-packages/nunjucks')(config);
 
   // Set logging level
   config.set('logging.level', 'info');
