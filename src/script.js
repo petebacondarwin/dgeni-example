@@ -1,7 +1,6 @@
 /**
- * @name helloWorld
  * @description This function returns a string.
- * 
+ *
  * @returns {string} This string has the value 'Hello World'.
  */
 
