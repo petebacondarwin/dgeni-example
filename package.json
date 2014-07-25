@@ -23,8 +23,8 @@
   },
   "homepage": "https://github.com/petebacondarwin/dgeni-example",
   "devDependencies": {
-    "dgeni": "^0.3.0",
-    "dgeni-packages": "^0.9.0",
+    "dgeni": "^0.4.0",
+    "dgeni-packages": "^0.10.0",
     "gulp": "^3.5.6",
     "grunt": "^0.4.4",
     "canonical-path": "0.0.2"
