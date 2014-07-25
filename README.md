@@ -60,7 +60,8 @@ works it is really easy to run Dgeni from a task:
 gulp.task('dgeni', function() {
   var dgeni = new Dgeni([require('./dgeni-example')]);
   return dgeni.generate();
-});```
+});
+```
 
 You can execute this task via:
 
