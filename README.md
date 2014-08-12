@@ -9,6 +9,7 @@ Dgeni is currently used in these projects:
 - [Angular](https://github.com/angular/angular.js/tree/master/docs)
 - [protractor](https://github.com/angular/protractor/tree/master/docs)
 - [ionic](https://github.com/driftyco/ionic)
+- [famous-angular](https://github.com/Famous/famous-angular)
 
 # Why should I use Dgeni?
 
