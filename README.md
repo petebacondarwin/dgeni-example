@@ -36,7 +36,7 @@ Just create a custom task in your `Gruntfile.js`:
 ```js
 grunt.registerTask('dgeni', 'Generate docs via dgeni.', function() {
   var done = this.async();
-  var dgeni = new Dgeni([require('./dgeni-example')]);
+  var dgeni = new Dgeni([require('./docs/dgeni-example')]);
   dgeni.generate().then(done);
 });
 ```
@@ -59,7 +59,7 @@ works it is really easy to run Dgeni from a task:
 
 ```js
 gulp.task('dgeni', function() {
-  var dgeni = new Dgeni([require('./dgeni-example')]);
+  var dgeni = new Dgeni([require('./docs/dgeni-example')]);
   return dgeni.generate();
 });
 ```
