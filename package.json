@@ -11,7 +11,7 @@
     "type": "git",
     "url": "https://github.com/petebacondarwin/dgeni-example.git"
   },
-  "author": "",
+  "author": "Pete Bacon Darwin",
   "licenses": [
     {
       "type": "Apache",
@@ -28,5 +28,12 @@
     "gulp": "^3.5.6",
     "grunt": "^0.4.4",
     "canonical-path": "0.0.2"
-  }
+  },
+  "contributors": [
+    "Pete Bacon Darwin <pete@bacondarwin.com>",
+    "Donald Pipowitch <pipo@senaeh.de>",
+    "sroe <sebastian.roemmig@tse-gmbh.de>",
+    "fvanderwielen <fvanderwielen@gmail.com>",
+    "Olivier Combe <olivier.combe@gmail.com>"
+  ]
 }
